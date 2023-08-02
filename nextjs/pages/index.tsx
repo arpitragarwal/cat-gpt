@@ -34,7 +34,8 @@ export default function Home() {
     console.log(formData)
     console.log(query)
 
-    fetchEventSource("https://karpathy-gpt-production.up.railway.app/karpathy-docs",  {
+//    fetchEventSource("https://karpathy-gpt-production.up.railway.app/karpathy-docs",  {
+    fetchEventSource("http://localhost:8000/cat-gpt-docs", {
       method: "POST",
       headers: {
         Accept: "text/event-stream",
@@ -52,7 +53,8 @@ export default function Home() {
 
     const ctrl = new AbortController();
     
-    fetchEventSource("https://karpathy-gpt-production.up.railway.app/karpathy-stream",  {
+    // fetchEventSource("https://karpathy-gpt-production.up.railway.app/karpathy-stream",  {
+    fetchEventSource("http://localhost:8000/cat-gpt-stream", {
       method: "POST",
       headers: {
         Accept: "text/event-stream",
@@ -79,10 +81,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Karpathy GPT</title>
+        <title>Cat GPT</title>
         <meta
           name="description"
-          content={`AI-powered search and chat for the Andrej Karpathy AI Course. `}
+          content={`AI-powered search and chat for the Jackson Galaxy youtube channel. `}
         />
         <meta
           name="viewport"

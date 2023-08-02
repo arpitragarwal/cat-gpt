@@ -52,8 +52,8 @@ def make_retriever(logger):
     # Set embeddings (must match your Pinecone DB)
     embedding = OpenAIEmbeddings()
     pc_api_key = os.environ.get('PINECONE_API_KEY')
-    pc_region = "us-east1-gcp" 
-    pc_index = "karpathy-gpt"
+    pc_region = "us-west4-gcp-free" 
+    pc_index = "cat-gpt"
 
     # Set Pinecone 
     pinecone.init(api_key=str(pc_api_key), environment=str(pc_region))
@@ -138,17 +138,17 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to Karpathy GPT!"}
+    return {"message": "Welcome to Cat-GPT!"}
 
 # Docs
-@app.post("/karpathy-docs")
+@app.post("/cat-gpt-docs")
 async def create_docs_response(
     query: str = Form("What is the difference between an encoder and decoder?"),
 ):
     return EventSourceResponse(generate_docs(query), headers={"Content-Type": "text/event-stream", "Connection": "keep-alive", "Cache-Control": "no-cache"})
 
 # Answer stream
-@app.post("/karpathy-stream")
+@app.post("/cat-gpt-stream")
 async def create_response(
     query: str = Form("What is the difference between an encoder and decoder?"),
 ):
