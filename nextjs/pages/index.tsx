@@ -54,7 +54,7 @@ export default function Home() {
     const ctrl = new AbortController();
     
     fetchEventSource("https://cat-gpt-production.up.railway.app/cat-gpt-stream",  {
-    //fetchEventSource("http://localhost:8000/cat-gpt-stream", {
+//    fetchEventSource("http://localhost:8000/cat-gpt-stream", {
       method: "POST",
       headers: {
         Accept: "text/event-stream",
@@ -84,7 +84,7 @@ export default function Home() {
         <title>Cat GPT</title>
         <meta
           name="description"
-          content={`AI-powered search and chat for the Jackson Galaxy youtube channel. `}
+          content={`AI-powered search and chat for the Jackson Galaxy youtube channel.`}
         />
         <meta
           name="viewport"
@@ -107,7 +107,7 @@ export default function Home() {
                   ref={inputRef}
                   className="h-12 w-full rounded-full border border-zinc-600 pr-12 pl-11 focus:border-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-800 sm:h-16 sm:py-2 sm:pr-16 sm:pl-16 sm:text-lg"
                   type="text"
-                  placeholder="What is the difference between an encoder and decoder?"
+                  placeholder="What type of food should I feed my cat?"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={handleKeyDown}
@@ -199,7 +199,7 @@ export default function Home() {
                 ))}
               </div>
             ) : (
-              <div className="mt-6 text-center text-lg">{`AI-powered search and chat for the Andrej Karpathy YouTube course.`}</div>
+              <div className="mt-6 text-center text-lg">{`AI-powered search and chat for Jackson Galaxy's youtube channel.`}</div>
             )}
           </div>
         </div>

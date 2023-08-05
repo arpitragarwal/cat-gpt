@@ -1,4 +1,4 @@
-import { IconBrandGithub, IconBrandTwitter } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandTwitter, IconBrandLinkedin} from "@tabler/icons-react";
 import { FC } from "react";
 
 export const Footer: FC = () => {
@@ -10,29 +10,20 @@ export const Footer: FC = () => {
         Created by
         <a
           className="hover:opacity-50 mx-1"
-          href="https://twitter.com/RLanceMartin"
+          href="https://www.linkedin.com/in/arpit-agarwal/"
           target="_blank"
           rel="noreferrer"
         >
-          Lance Martin
+          Arpit Agarwal
         </a>
-        based on
+        based on a 
         <a
           className="hover:opacity-50 ml-1"
-          href="https://twitter.com/karpathy"
+          href="https://github.com/rlancemartin/karpathy-gpt/"
           target="_blank"
           rel="noreferrer"
         >
-          Andrej Karpathy
-        </a>
-        {`'s blog`}
-        <a
-          className="hover:opacity-50 ml-1"
-          href="https://www.youtube.com/c/AndrejKarpathy"
-          target="_blank"
-          rel="noreferrer"
-        >
-          YouTube lectures
+          LangChain example by Lance Martin
         </a>
         .
       </div>
@@ -40,16 +31,16 @@ export const Footer: FC = () => {
       <div className="flex space-x-4">
         <a
           className="flex items-center hover:opacity-50"
-          href="https://twitter.com/RLanceMartin"
+          href="https://www.linkedin.com/in/arpit-agarwal/"
           target="_blank"
           rel="noreferrer"
         >
-          <IconBrandTwitter size={24} />
+          <IconBrandLinkedin size={24} />
         </a>
 
         <a
           className="flex items-center hover:opacity-50"
-          href="https://github.com/PineappleExpress808/lex-gpt"
+          href="https://github.com/arpitragarwal/cat-gpt"
           target="_blank"
           rel="noreferrer"
         >
