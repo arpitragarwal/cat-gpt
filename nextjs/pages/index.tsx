@@ -36,7 +36,6 @@ export default function Home() {
     console.log(query)
 
     fetchEventSource("https://cat-gpt-production.up.railway.app/cat-gpt-docs",  {
-//    fetchEventSource("http://localhost:8000/cat-gpt-docs", {
       method: "POST",
       headers: {
         Accept: "text/event-stream",
@@ -55,7 +54,6 @@ export default function Home() {
     const ctrl = new AbortController();
     
     fetchEventSource("https://cat-gpt-production.up.railway.app/cat-gpt-stream",  {
-//    fetchEventSource("http://localhost:8000/cat-gpt-stream", {
       method: "POST",
       headers: {
         Accept: "text/event-stream",
@@ -118,7 +116,7 @@ export default function Home() {
             {loading ? (
               <div className="mt-6 w-full">
 
-                <div className="font-bold text-2xl mt-6">Passages</div>
+                <div className="font-bold text-2xl mt-6">Relevant text used as context</div>
                 <div className="animate-pulse mt-2">
                   <div className="h-4 bg-gray-300 rounded"></div>
                   <div className="h-4 bg-gray-300 rounded mt-2"></div>
@@ -133,7 +131,7 @@ export default function Home() {
                 <Answer text={answer} />
 
                 <div className="mt-6 mb-16">
-                  <div className="font-bold text-2xl">Passages</div>
+                  <div className="font-bold text-2xl">Relevant text used as context</div>
 
                   {chunks.map((chunk, index) => (
                     <div key={index}>
@@ -142,7 +140,7 @@ export default function Home() {
                           <div className="flex items-center">
                             <Image
                               className="rounded-lg"
-                              src={"/"+chunk.metadata.id+".jpg"}
+                              src={"/0"+chunk.metadata.id+".jpg"}
                               width={103}
                               height={70}
                               alt={chunk.metadata.title}
@@ -168,7 +166,7 @@ export default function Home() {
               </div>
             ) : chunks.length > 0 ? (
               <div className="mt-6 pb-16">
-                <div className="font-bold text-2xl">Passages</div>
+                <div className="font-bold text-2xl">Relevant text used as context</div>
                 {chunks.map((chunk, index) => (
                   <div key={index}>
                     <div className="mt-4 border border-zinc-600 rounded-lg p-4">
@@ -176,7 +174,7 @@ export default function Home() {
                         <div className="flex items-center">
                           <Image
                             className="rounded-lg"
-                            src={"/"+chunk.metadata.id+".jpg"}
+                            src={"/0"+chunk.metadata.id+".jpg"}
                             width={103}
                             height={70}
                             alt={chunk.metadata.title}
