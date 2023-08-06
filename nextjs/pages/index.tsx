@@ -7,6 +7,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { KeyboardEvent, useEffect, useRef, useState } from "react";
 import { fetchEventSource } from '@microsoft/fetch-event-source';
+import { Analytics} from '@vercel/analytics/react';
 
 export default function Home() {
 
@@ -205,6 +206,7 @@ export default function Home() {
         </div>
         <Footer />
       </div>
+      <Analytics />
     </>
   );
 }

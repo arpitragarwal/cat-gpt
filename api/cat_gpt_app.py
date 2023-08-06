@@ -143,14 +143,14 @@ async def root():
 # Docs
 @app.post("/cat-gpt-docs")
 async def create_docs_response(
-    query: str = Form("What is the difference between an encoder and decoder?"),
+    query: str = Form("What type of food should I feed my cat?"),
 ):
     return EventSourceResponse(generate_docs(query), headers={"Content-Type": "text/event-stream", "Connection": "keep-alive", "Cache-Control": "no-cache"})
 
 # Answer stream
 @app.post("/cat-gpt-stream")
 async def create_response(
-    query: str = Form("What is the difference between an encoder and decoder?"),
+    query: str = Form("What type of food should I feed my cat?"),
 ):
     # Return SSE
     return EventSourceResponse(generate_response(query), headers={"Content-Type": "text/event-stream", "Connection": "keep-alive", "Cache-Control": "no-cache"})
