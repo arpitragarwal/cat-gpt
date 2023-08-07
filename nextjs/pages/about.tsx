@@ -18,7 +18,7 @@ export default function About() {
         <title>CatGPT</title>
         <meta
           name="description"
-          content={`AI-powered search and chat for the Jackson Galaxy youtube channel.`}
+          content={`GPT-powered search providing reliable answers along with relevant sources for cat-related questions.`}
         />
         <meta
           name="viewport"
@@ -40,7 +40,7 @@ export default function About() {
 		}
 
 		<ul className="bullet-list">
-              		<li> CatGPT is a search bot for providing reliable answers to cat-related questions along with relevant sources.</li>
+              		<li> GPT-powered search providing reliable answers along with relevant sources for cat-related questions.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
         	</ul>
 		

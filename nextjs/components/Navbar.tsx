@@ -17,7 +17,7 @@ export const Navbar: FC = () => {
             alt="CatGPT"
             height={40}
           />
-          <div className="ml-2">Cat GPT</div>
+          <div className="ml-2">CatGPT</div>
         </a>
       </div>
       <div>
