@@ -46,7 +46,7 @@ export default function About() {
 		{
 		<b> What does it do?</b>
 		}
-		<ul class="bullet-list">
+		<ul className="bullet-list">
               		<li> CatGPT finds the most relevant snippets of youtube content based on your search query, which serve as context to generate the response from.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
 			<li> By limiting the context to educational youtube channels only it hopes to generate reliable, high-quality answers. </li> 
@@ -57,7 +57,7 @@ export default function About() {
 		{
 		<b> How does it work?</b>
 		}
-		<ul class="bullet-list">
+		<ul className="bullet-list">
               		<li> Using a pre-made vector embedding of video transcripts of Jackson Galaxy's youtube channel CatGPT finds the top 3 most relevant snippets with respect to your search query. OpenAI API is used for transcribing the youtube videos, and PineconeDB is used for the vector embeddings and similarity search. </li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
 			<li> The relevant snippets are provided as context along with your search query to OpenAI's API to generate an answer.</li>
