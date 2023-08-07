@@ -23,9 +23,10 @@ export const Footer: FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          LangChain example by Lance Martin
+          LangChain example 
         </a>
-        .
+	<span>&nbsp;</span>	
+	by Lance Martin.
       </div>
 
       <div className="flex space-x-4">

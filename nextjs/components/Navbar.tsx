@@ -23,16 +23,12 @@ export const Navbar: FC = () => {
       <div>
         <a
           className="flex items-center hover:opacity-50"
-          href="https://www.youtube.com/@JacksonGalaxy"
+          href="./about"
           target="_blank"
           rel="noreferrer"
         >
-          <div className="hidden sm:flex">Jackson Galaxy YouTube</div>
+          <div className="hidden sm:flex">About Cat GPT</div>
 
-          <IconExternalLink
-            className="ml-1"
-            size={20}
-          />
         </a>
       </div>
     </div>
