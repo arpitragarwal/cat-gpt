@@ -14,7 +14,7 @@ export const Navbar: FC = () => {
           <Image
             className="hidden sm:flex"
             src={king}
-            alt="Cat GPT"
+            alt="CatGPT"
             height={40}
           />
           <div className="ml-2">Cat GPT</div>
