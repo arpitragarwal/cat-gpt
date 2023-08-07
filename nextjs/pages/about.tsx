@@ -59,7 +59,7 @@ export default function About() {
 		<b> How does it work?</b>
 		}
 		<ul className="bullet-list">
-              		<li> Using a pre-made vector embedding of video transcripts of <a href="https://www.youtube.com/@JacksonGalaxy/">Jackson Galaxy's youtube channel</a>, CatGPT finds the top 3 most relevant snippets to your search query. <a href="https://platform.openai.com/docs/api-reference">OpenAI API</a> is used for transcribing the youtube videos, and <a href="https://www.pinecone.io/">PineconeDB</a> is used for the vector embeddings and similarity search. </li>
+              		<li> Using a pre-made vector embedding of video transcripts of <a href="https://www.youtube.com/@JacksonGalaxy/">Jackson Galaxy's youtube channel</a>, CatGPT finds the top 3 most relevant snippets to your search query. <a href="https://platform.openai.com/docs/api-reference">OpenAI API</a> is used for transcribing the youtube videos, and <a href="https://www.pinecone.io/">Pinecone</a> is used for the vector embeddings and similarity search. </li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
 			<li> The relevant snippets are provided as context along with your search query to OpenAI's API to generate an answer.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
