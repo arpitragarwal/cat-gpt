@@ -38,7 +38,7 @@ export default function About() {
 		<b> What is CatGPT?</b>
 		}
 
-		<ul class="bullet-list">
+		<ul className="bullet-list">
               		<li> CatGPT is a search bot for providing reliable answers to cat-related questions along with relevant sources.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
         	</ul>
