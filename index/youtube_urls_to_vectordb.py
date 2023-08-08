@@ -28,7 +28,11 @@ import unicodedata
 channel_id = "UCheL-cUqfzUB8dfM_rFOfDQ" #pull out id from channels above
 playlist = Playlist(playlist_from_channel_id(channel_id))
 
-#TODO Currently only pulls the 1st 100 videos. Need to extend to pull all videos
+while playlist.hasMoreVideos:
+    while playlist.hasMoreVideos:
+    print('Getting more videos...')
+    playlist.getNextVideos()
+    print(f'Videos retrieved: {len(playlist.videos)}')
 
 stor_metadata = pd.DataFrame()
 
@@ -42,7 +46,7 @@ for count, v in enumerate(playlist.videos):
 #print(stor_metadata)
 
 urls=list(stor_metadata.link)
-save_dir = "../Downloads/Youtube"
+save_dir = "../Downloads/JacksonGalaxy"
 openai.api_key = os.environ["OPENAI_API_KEY"]
 loader = GenericLoader(YoutubeAudioLoader(urls,save_dir),OpenAIWhisperParser())
 docs = loader.load()

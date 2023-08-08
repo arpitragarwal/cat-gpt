@@ -1,3 +1,5 @@
 .DS_Store
 Downloads/*
 *.swp
+api/__pycache__/
+index/.ipynb_checkpoints/

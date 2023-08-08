@@ -50,7 +50,7 @@ export default function About() {
 		<ul className="bullet-list">
               		<li> CatGPT finds the most relevant snippets of youtube content based on your search query, which serve as context to generate the response from.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
-			<li> By limiting the context to educational youtube channels only it hopes to generate reliable, high-quality answers. </li> 
+			<li> By limiting the context to educational youtube channels alone, it hopes to generate reliable, high-quality answers. </li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
 			<li> It provides the relevant youtube transcripts used as context for the answer, along with the actual youtube source video. Users can quickly skim over the transcripts, or watch the actual source video for more details.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
