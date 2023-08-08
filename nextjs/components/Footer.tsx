@@ -4,9 +4,9 @@ import { FC } from "react";
 export const Footer: FC = () => {
   return (
     <div className="flex h-[50px] border-t border-gray-300 py-2 px-8 items-center sm:justify-between justify-center">
-      <div className="hidden sm:flex"></div>
+      <div className="sm:flex items-center"></div>
 
-      <div className="hidden sm:flex italic text-sm">
+      <div className="sm:flex italic text-sm">
         Created by
         <a
           className="hover:opacity-50 mx-1"
@@ -26,7 +26,7 @@ export const Footer: FC = () => {
           LangChain example 
         </a>
 	<span>&nbsp;</span>	
-	by Lance Martin.
+	by Lance Martin
       </div>
 
       <div className="flex space-x-4">
@@ -36,7 +36,7 @@ export const Footer: FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <IconBrandLinkedin size={24} />
+          <IconBrandLinkedin size={32} />
         </a>
 
         <a
@@ -45,7 +45,7 @@ export const Footer: FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <IconBrandGithub size={24} />
+          <IconBrandGithub size={32} />
         </a>
       </div>
     </div>

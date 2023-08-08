@@ -27,7 +27,7 @@ export const Navbar: FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <div className="hidden sm:flex">About CatGPT</div>
+          <div className="sm:flex">About CatGPT</div>
 
         </a>
       </div>
