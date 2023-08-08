@@ -140,7 +140,7 @@ export default function Home() {
                           <div className="flex items-center">
                             <Image
                               className="rounded-lg"
-                              src={"/0"+chunk.metadata.id+".jpg"}
+                              src={"/"+chunk.metadata.id+".jpg"}
                               width={103}
                               height={70}
                               alt={chunk.metadata.title}
