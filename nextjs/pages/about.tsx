@@ -20,7 +20,7 @@ export default function About() {
         <title>CatGPT</title>
         <meta
           name="description"
-          content={`GPT-powered search providing reliable answers along with relevant sources for cat-related questions`}
+	  content={`GPT-powered search providing reliable answers along with relevant sources to cat-related questions`}
         />
         <meta
           name="viewport"
@@ -42,7 +42,7 @@ export default function About() {
 		}
 
 		<ul className="bullet-list">
-              		<li> GPT-powered search providing reliable answers along with relevant sources for cat-related questions.</li>
+			<li> GPT-powered search providing reliable answers along with relevant sources to cat-related questions.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
         	</ul>
 		

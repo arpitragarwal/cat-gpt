@@ -116,7 +116,7 @@ export default function Home() {
             {loading ? (
               <div className="mt-6 w-full">
 
-                <div className="font-bold text-2xl mt-6">Relevant text used as context for the answer</div>
+                <div className="font-bold text-xl mt-6">Relevant text used as context for the answer</div>
                 <div className="animate-pulse mt-2">
                   <div className="h-4 bg-gray-300 rounded"></div>
                   <div className="h-4 bg-gray-300 rounded mt-2"></div>
@@ -127,11 +127,12 @@ export default function Home() {
               </div>
             ) : answer ? (
               <div className="mt-6">
-                <div className="font-bold text-2xl mb-2">Answer based on context below</div>
+                {/*<div className="font-bold text-2xl mb-2">Answer based on relevant snippets shown below</div>
+		*/}
                 <Answer text={answer} />
 
                 <div className="mt-6 mb-16">
-                  <div className="font-bold text-2xl">Relevant text used as context for the answer</div>
+                  <div className="font-bold text-xl">Relevant text used as context for the answer</div>
 
                   {chunks.map((chunk, index) => (
                     <div key={index}>
@@ -166,7 +167,7 @@ export default function Home() {
               </div>
             ) : chunks.length > 0 ? (
               <div className="mt-6 pb-16">
-                <div className="font-bold text-2xl">Relevant text used as context for the answer</div>
+                <div className="font-bold text-xl">Relevant text used as context for the answer</div>
                 {chunks.map((chunk, index) => (
                   <div key={index}>
                     <div className="mt-4 border border-zinc-600 rounded-lg p-4">
