@@ -4,29 +4,10 @@ import { FC } from "react";
 export const Footer: FC = () => {
   return (
     <div className="flex h-[50px] border-t border-gray-300 py-2 px-8 items-center sm:justify-between justify-center">
-      <div className="sm:flex items-center"></div>
+      <div className="sm:flex italic text-sm"> </div>
 
       <div className="sm:flex italic text-sm">
-        Created by
-        <a
-          className="hover:opacity-50 mx-1"
-          href="https://www.linkedin.com/in/arpit-agarwal/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Arpit Agarwal
-        </a>
-        based on a 
-        <a
-          className="hover:opacity-50 ml-1"
-          href="https://github.com/rlancemartin/karpathy-gpt/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LangChain example 
-        </a>
-	<span>&nbsp;</span>	
-	by Lance Martin
+	  Created by <span>&nbsp;</span><a href="https://www.linkedin.com/in/arpit-agarwal/" className="my-link"> Arpit Agarwal </a><span>&nbsp;</span> based on a Langchain <span>&nbsp;</span><a href="https://github.com/rlancemartin/karpathy-gpt/" className="my-link">example</a><span>&nbsp;</span> by Lance Martin
       </div>
 
       <div className="flex space-x-4">

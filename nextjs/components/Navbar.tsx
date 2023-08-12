@@ -21,15 +21,7 @@ export const Navbar: FC = () => {
         </a>
       </div>
       <div>
-        <a
-          className="flex items-center hover:opacity-50"
-          href="./about"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="sm:flex">About CatGPT</div>
-
-        </a>
+	<a href="./about" className="my-link">About CatGPT</a>
       </div>
     </div>
   );

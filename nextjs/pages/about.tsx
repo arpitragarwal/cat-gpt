@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Answer } from "@/components/Answer/Answer";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
@@ -9,6 +10,7 @@ import { KeyboardEvent, useEffect, useRef, useState } from "react";
 import { fetchEventSource } from '@microsoft/fetch-event-source';
 import { Analytics} from '@vercel/analytics/react';
 import cat_gpt_explainer from "../public/cat-gpt-explainer.png";
+import RAG_explainer from "../public/RAG-explainer.jpeg";
 
 export default function About() {
 
@@ -48,24 +50,30 @@ export default function About() {
 		<b> What does it do?</b>
 		}
 		<ul className="bullet-list">
-              		<li> CatGPT finds the most relevant snippets of youtube content based on your search query, which serve as context to generate the response from.</li>
+			<li> CatGPT is a <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-customize-rag.html" className="my-link">'Retrieval Augmented Generation (RAG)</a>' system that augments your search query with the most relevant snippets of content from a 'trusted corpus' to your query, to ultimately generate the answer.</li> 
 			<li> <span>&nbsp;&nbsp;</span> </li>
-			<li> By limiting the context to educational youtube channels alone, it hopes to generate reliable, high-quality answers. </li>
+              		<li> CatGPT relies on a 'trusted corpus' of youtube transcripts (currently only <a href="https://www.youtube.com/@JacksonGalaxy/about" className="my-link"> Jackson Galaxy's</a> youtube channel). It searches through a vector representation of this corpus to find the closest matches to your search query. By limiting the context to this trusted corpus alone, it hopes to generate reliable, high-quailty answers.</li> 
 			<li> <span>&nbsp;&nbsp;</span> </li>
-			<li> It provides the relevant youtube transcripts used as context for the answer, along with the actual youtube source video. Users can quickly skim over the transcripts, or watch the actual source video for more details.</li>
-			<li> <span>&nbsp;&nbsp;</span> </li>
+			<li> These matched snippets are then provided to the LLM as context for the answer, and shown to the user below as sources for their answer. Users can quickly skim over the transcripts, or watch the actual source video for more details.</li>
         	</ul>
+          	<Image
+            		className="sm:flex"
+            		src={RAG_explainer}
+            		alt="credit: AWS"
+          	/>
+		<p><small>Image credit: <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-customize-rag.html" className="my-link">AWS Sagemaker guide</a></small></p>
+
 		{
-		<b> How does it work?</b>
+		<b> How is it built?</b>
 		}
 		<ul className="bullet-list">
-              		<li> Using a pre-made vector embedding of video transcripts of <a href="https://www.youtube.com/@JacksonGalaxy/">Jackson Galaxy's youtube channel</a>, CatGPT finds the top 3 most relevant snippets to your search query. <a href="https://platform.openai.com/docs/api-reference">OpenAI API</a> is used for transcribing the youtube videos, and <a href="https://www.pinecone.io/">Pinecone</a> is used for the vector embeddings and similarity search. </li>
+              		<li> <u>Corpus</u>: Audio from <a href="https://www.youtube.com/@JacksonGalaxy/" className="my-link">Jackson Galaxy's youtube channel</a> is transcribed and a vector embedding is created for chunks of the transcripts. <a href="https://platform.openai.com/docs/api-reference" className="my-link">OpenAI API</a> is used for transcribing the youtube audios, and <a href="https://www.pinecone.io/" className="my-link">Pinecone</a> is used for the vector embeddings and similarity search. </li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
-			<li> The relevant snippets are provided as context along with your search query to OpenAI's API to generate an answer.</li>
+			<li> <u> Answer generation</u>:  GPT-3.5 is used to generate an answer to the query augmented with the relevant snippets.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
-			<li> The backend is based on <a href="https://fastapi.tiangolo.com/">Fast API</a> and is hosted on <a href="https://railway.app/">Railway.app</a>; the frontend is made and hosted using <a href="https://nextjs.org/">Next.js</a> and <a href="https://vercel.com/">Vercel</a>.</li>
+			<li> <u> Web app</u>: The backend is based on <a href="https://fastapi.tiangolo.com/" className="my-link">Fast API</a> and is hosted on <a href="https://railway.app/" className="my-link">Railway.app</a>; the frontend is made and hosted using <a href="https://nextjs.org/" className="my-link">Next.js</a> and <a href="https://vercel.com/" className="my-link">Vercel</a>.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
-			<li> CatGPT is made using <a href="https://python.langchain.com/docs/get_started/introduction.html">LangChain</a>, and is based on a <a href="https://github.com/rlancemartin/karpathy-gpt/">template</a> provided by LanceMartin. The complete source code for the project is <a href="https://github.com/arpitragarwal/cat-gpt"> here.</a></li>
+			<li><u>Overall framework</u>: CatGPT is made using <a href="https://python.langchain.com/docs/get_started/introduction.html" className="my-link">LangChain</a>, and is based on a <a href="https://github.com/rlancemartin/karpathy-gpt/" className="my-link">template</a> provided by LanceMartin. The complete source code for the project is <a href="https://github.com/arpitragarwal/cat-gpt" className="my-link"> here.</a></li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
         	</ul>
 	
