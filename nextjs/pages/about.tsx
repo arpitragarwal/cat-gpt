@@ -20,7 +20,7 @@ export default function About() {
         <title>CatGPT</title>
         <meta
           name="description"
-          content={`GPT-powered search providing reliable answers along with relevant sources for cat-related questions.`}
+          content={`GPT-powered search providing reliable answers along with relevant sources for cat-related questions`}
         />
         <meta
           name="viewport"

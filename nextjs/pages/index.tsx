@@ -83,7 +83,7 @@ export default function Home() {
         <title>Cat GPT</title>
         <meta
           name="description"
-          content={`GPT-powered search providing reliable answers to cat-related questions along with relevant sources.`}
+          content={`GPT-powered search providing reliable answers to cat-related questions along with relevant sources`}
         />
         <meta
           name="viewport"
@@ -198,7 +198,7 @@ export default function Home() {
                 ))}
               </div>
             ) : (
-              <div className="mt-6 text-center text-lg">{`GPT-powered search providing reliable answers along with relevant sources for cat-related questions.`}</div>
+              <div className="mt-6 text-center text-lg">{`GPT-powered search providing reliable answers along with relevant sources for cat-related questions`}</div>
             )}
           </div>
         </div>
