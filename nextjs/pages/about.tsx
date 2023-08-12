@@ -61,13 +61,16 @@ export default function About() {
             		src={RAG_explainer}
             		alt="credit: AWS"
           	/>
-		<p><small>Image credit: <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-customize-rag.html" className="my-link">AWS Sagemaker guide</a></small></p>
+		<p> <small>Image credit: <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-customize-rag.html" className="my-link">AWS Sagemaker guide</a></small></p>
+		<div>
+		&nbsp;
+		</div>
 
 		{
 		<b> How is it built?</b>
 		}
 		<ul className="bullet-list">
-              		<li> <u>Corpus</u>: Audio from <a href="https://www.youtube.com/@JacksonGalaxy/" className="my-link">Jackson Galaxy's youtube channel</a> is transcribed and a vector embedding is created for chunks of the transcripts. <a href="https://platform.openai.com/docs/api-reference" className="my-link">OpenAI API</a> is used for transcribing the youtube audios, and <a href="https://www.pinecone.io/" className="my-link">Pinecone</a> is used for the vector embeddings and similarity search. </li>
+			<li> <u>Corpus</u>: Audio from <a href="https://www.youtube.com/@JacksonGalaxy/" className="my-link">Jackson Galaxy's youtube channel</a> is transcribed and a vector embedding is created for chunks of the transcripts. <a href="https://platform.openai.com/docs/api-reference" className="my-link">OpenAI API</a> is used for transcribing the youtube audios, and <a href="https://www.pinecone.io/" className="my-link">Pinecone</a> is used for the vector embeddings and the similarity search. </li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
 			<li> <u> Answer generation</u>:  GPT-3.5 is used to generate an answer to the query augmented with the relevant snippets.</li>
 			<li> <span>&nbsp;&nbsp;</span> </li>
