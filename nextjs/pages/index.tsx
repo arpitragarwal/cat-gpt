@@ -199,7 +199,7 @@ export default function Home() {
                 ))}
               </div>
             ) : (
-              <div className="mt-6 text-center text-lg">{`GPT-powered search providing reliable answers along with relevant sources for cat-related questions`}</div>
+              <div className="mt-6 text-center text-lg">{`GPT-powered search providing reliable answers along with relevant sources to cat-related questions`}</div>
             )}
           </div>
         </div>
