@@ -50,7 +50,7 @@ export default function About() {
 		<b> What does it do?</b>
 		}
 		<ul className="bullet-list">
-			<li> CatGPT is a <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-customize-rag.html" className="my-link">'Retrieval Augmented Generation (RAG)</a>' system that augments your search query with the most relevant snippets of content from a 'trusted corpus' to your query, to ultimately generate the answer.</li> 
+			<li> CatGPT is a <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/jumpstart-foundation-models-customize-rag.html" className="my-link">'Retrieval Augmented Generation (RAG)</a>' system that augments your search query with the most relevant snippets of content to your query from a 'trusted corpus', to ultimately generate the answer.</li> 
 			<li> <span>&nbsp;&nbsp;</span> </li>
               		<li> CatGPT relies on a 'trusted corpus' of youtube transcripts (currently only <a href="https://www.youtube.com/@JacksonGalaxy/about" className="my-link"> Jackson Galaxy's</a> youtube channel). It searches through a vector representation of this corpus to find the closest matches to your search query. By limiting the context to this trusted corpus alone, it hopes to generate reliable, high-quailty answers.</li> 
 			<li> <span>&nbsp;&nbsp;</span> </li>
