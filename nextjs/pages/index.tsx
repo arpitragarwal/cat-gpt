@@ -80,7 +80,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Cat GPT</title>
+        <title>CatGPT</title>
         <meta
           name="description"
           content={`GPT-powered search providing reliable answers to cat-related questions along with relevant sources`}
